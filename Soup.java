@@ -7,24 +7,24 @@ public class Soup {
     private String company;
 
     //this is a constructor it sets the instance variables (more on this later in the year)
-    public Soup(String l, String c){
-        letters = l;
-        company = c;
+    public Soup() {
+        letters = "";
+        company = "none";
     }
 
 
     //sets the name of the company to the provided name
-    public void setCompany(String company){
+    public void setCompany(String company) {
         this.company = company;
     }
 
     //returns the company name
-    public String getCompany(){
+    public String getCompany() {
         return company;
     }
 
     //returns letters
-    public String getLetters(){
+    public String getLetters() {
         return letters;
     }
 
@@ -37,30 +37,31 @@ public class Soup {
 
 
     //Use Math.random() to get a random character from the letters string and return it.
-    public char randomLetter(){
+    public char randomLetter() {
         return 'a';
     }
 
 
-    //returns the letters currently stored with the company name placed directly in the center of all
+    //poscondition- returns the letters currently stored with the company name placed directly in the center of all
     //the letters
-    public String companyCentered(){
+
+    public String companyCentered() {
         return "";
     }
 
 
     //should remove the first available vowel from letters. If there are no vowels this method has no effect.
-    public void removeFirstVowel(){
+    public void removeFirstVowel() {
         
     }
 
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
-    public void removeSome(int num){
+    public void removeSome(int num) {
 
     }
 
     //should remove the word "word" from the string letters. If the word is not found in letters then it does nothing.
-    public void removeWord(String word){
+    public void removeWord(String word) {
         
     }
 }
