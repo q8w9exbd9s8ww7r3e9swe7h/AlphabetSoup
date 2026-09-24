@@ -1,12 +1,15 @@
+//Name: Leo
+//Date: 09/24/26
+//Description: This program will  
 public class Soup {
     //these are instance variables 
     private String letters;
     private String company;
 
     //this is a constructor it sets the instance variables (more on this later in the year)
-    public Soup(){
-        letters ="";
-        company = "none";
+    public Soup(String l, String c){
+        letters = l;
+        company = c;
     }
 
 
