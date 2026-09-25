@@ -67,7 +67,7 @@ public class Soup {
     //precondition- num must be an int less than the length of the string
     //poscondition- returns null
     public void removeSome(int num) {
-        int rand = (Math.random() * (length - num));
+        int rand = (int)(Math.random() * (letters.length() - num));
         letters = letters.substring(0, rand) + letters.substring(rand + num);
     }
 
