@@ -31,37 +31,50 @@ public class Soup {
 //below are the functions you'll be writing.
 
     //adds a word to the pool of letters known as "letters"
+    //precondition- word must be a string
+    //poscondition- returns null
     public void add(String word){
-
+        letters += word;
     }
 
 
     //Use Math.random() to get a random character from the letters string and return it.
+    //precondition- word must be a string
+    //poscondition- returns a random letter of type "char"
     public char randomLetter() {
-        return 'a';
+        int rand = (int)(Math.random() * letters.length());
+        return letters.charAt(rand);
     }
 
-
+    //precondition- num must be an int less than the length of the string
     //poscondition- returns the letters currently stored with the company name placed directly in the center of all
     //the letters
 
     public String companyCentered() {
-        return "";
+        int middle = letters.length() / 2;
+        return letters.substring(0, middle) + company + letters.substring(middle);
     }
 
 
     //should remove the first available vowel from letters. If there are no vowels this method has no effect.
+    //precondition- letters must be initialized
+    //poscondition- returns null
     public void removeFirstVowel() {
-        
+        letters = letters.replaceFirst("[aeiouAEIOU]", "");
     }
 
     //should remove "num" letters from a random spot in the string letters. You may assume num never exceeds the length of the string.
+    //precondition- num must be an int less than the length of the string
+    //poscondition- returns null
     public void removeSome(int num) {
-
+        int rand = (Math.random() * (length - num));
+        letters = letters.substring(0, rand) + letters.substring(rand + num);
     }
 
     //should remove the word "word" from the string letters. If the word is not found in letters then it does nothing.
+    //precondition- word must be a string
+    //poscondition- returns null
     public void removeWord(String word) {
-        
+        letters = letters.replaceAll(word, "");
     }
 }
