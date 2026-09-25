@@ -1,6 +1,6 @@
 //Name: Leo
 //Date: 09/24/26
-//Description: This program will  
+//Description: This program will do Alphabet Soup
 public class Soup {
     //these are instance variables 
     private String letters;
